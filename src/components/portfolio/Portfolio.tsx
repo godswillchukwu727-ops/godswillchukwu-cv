@@ -12,7 +12,7 @@ import cinema from "@/assets/work-cinema.jpg";
 type Cat = "all" | "branding" | "social" | "photo" | "event" | "cinema";
 
 const works = [
-  { id: 1, src: branding, tag: "Brand Identity", title: "Rive Identity System", sub: "Logo · Print", cat: "branding", span: "md:col-span-2" },
+  { id: 1, src: branding, tag: "Brand Identity", title: "S&T Identity System", sub: "Logo · Print", cat: "branding", span: "md:col-span-2" },
   { id: 2, src: fashion, tag: "Photography", title: "Lagos Golden Hour", sub: "Fashion Editorial", cat: "photo", span: "md:row-span-2" },
   { id: 3, src: product, tag: "Photography", title: "Lourery Parfum", sub: "Product Story", cat: "photo" },
   { id: 4, src: social, tag: "Social Media", title: "Silk Series", sub: "Campaign Design", cat: "social" },
