@@ -17,7 +17,7 @@ const apartmentImages = [apartment1, apartment2, apartment3, apartment4];
 type Cat = "all" | "branding" | "social" | "photo" | "event" | "cinema";
 
 const works = [
-  { id: 1, src: branding, tag: "Brand Identity", title: "S&T Logo Animation", sub: "Animation", cat: "branding", span: "md:col-span-2" },
+  { id: 1, src: branding, tag: "Logo Animation", title: "S&T Logo Animation", sub: "Animation", cat: "branding", span: "md:col-span-2" },
   { id: 2, src: fashion, tag: "Photography", title: "Creative Visual", sub: "Editorial", cat: "photo", span: "md:row-span-2" },
   { id: 3, src: product, tag: "Photography", title: "Mockup designs", sub: "Product Story", cat: "photo" },
   { id: 4, src: social, tag: "Social Media", title: "Frill Branding design", sub: "Product Design", cat: "social" },
