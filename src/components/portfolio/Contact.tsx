@@ -29,7 +29,7 @@ export const Contact = () => (
           Send an Email
         </a>
         <a
-          href="https://behance.net/goddi"
+          href="https://www.behance.net/godswillchukwu_cre8"
           target="_blank"
           rel="noopener noreferrer"
           className="font-mono text-[10px] tracking-[0.15em] uppercase px-7 py-3.5 border border-border text-foreground hover:border-primary hover:text-primary transition-all"
