@@ -23,7 +23,7 @@ const works = [
   { id: 4, src: social, tag: "Social Media", title: "Frill Branding design", sub: "Product Design", cat: "social" },
   { id: 5, src: event, tag: "Event Coverage", title: "Holy Ghost Arena", sub: "Live Production", cat: "event", span: "md:col-span-2" },
   { id: 6, src: cinema, tag: "Cinematography", title: "The Hacker Movie trailer", sub: "Short Film", cat: "cinema" },
-  { id: 7, src: apartment1, images: apartmentImages, tag: "Brand & Photo", title: "Social media designs.", sub: "Social Media Graphics", cat: "branding", span: "md:col-span-2" },
+  { id: 7, src: apartment1, images: apartmentImages, tag: "Social Media", title: "Social media designs.", sub: "Social Media Graphics", cat: "branding", span: "md:col-span-2" },
 ] as const;
 
 const filters: { label: string; value: Cat }[] = [
