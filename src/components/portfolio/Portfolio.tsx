@@ -73,12 +73,30 @@ export const Portfolio = () => {
               onClick={() => setLightbox(w.src)}
               className={`group relative overflow-hidden bg-card cursor-pointer ${("span" in w && w.span) || ""}`}
             >
-              <img
-                src={w.src}
-                alt={w.title}
-                loading="lazy"
-                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-50"
-              />
+              {"images" in w && w.images ? (
+                <div
+                  onClick={(e) => e.stopPropagation()}
+                  className="w-full h-full overflow-x-auto overflow-y-hidden flex snap-x snap-mandatory scrollbar-hide"
+                >
+                  {w.images.map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img}
+                      alt={`${w.title} ${idx + 1}`}
+                      loading="lazy"
+                      onClick={() => setLightbox(img)}
+                      className="w-full h-full flex-shrink-0 object-cover snap-center transition-all duration-700 hover:brightness-75"
+                    />
+                  ))}
+                </div>
+              ) : (
+                <img
+                  src={w.src}
+                  alt={w.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-50"
+                />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
                 <div className="text-eyebrow mb-2">{w.tag}</div>
                 <div className="font-display text-xl font-bold leading-tight">{w.title}</div>
