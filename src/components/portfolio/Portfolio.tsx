@@ -6,8 +6,13 @@ import event from "@/assets/work-event.jpg";
 import product from "@/assets/work-product.jpg";
 import fashion from "@/assets/work-fashion.jpg";
 import social from "@/assets/work-social.jpg";
-import apartment from "@/assets/work-apartment.jpg";
+import apartment1 from "@/assets/work-apartment-1.png";
+import apartment2 from "@/assets/work-apartment-2.png";
+import apartment3 from "@/assets/work-apartment-3.png";
+import apartment4 from "@/assets/work-apartment-4.png";
 import cinema from "@/assets/work-cinema.jpg";
+
+const apartmentImages = [apartment1, apartment2, apartment3, apartment4];
 
 type Cat = "all" | "branding" | "social" | "photo" | "event" | "cinema";
 
@@ -18,7 +23,7 @@ const works = [
   { id: 4, src: social, tag: "Social Media", title: "Frill Branding design", sub: "Product Design", cat: "social" },
   { id: 5, src: event, tag: "Event Coverage", title: "Holy Ghost Arena", sub: "Live Production", cat: "event", span: "md:col-span-2" },
   { id: 6, src: cinema, tag: "Cinematography", title: "The Hacker Movie trailer", sub: "Short Film", cat: "cinema" },
-  { id: 7, src: apartment, tag: "Brand & Photo", title: "Perry Shortlet", sub: "Visual Identity · Real Estate", cat: "branding", span: "md:col-span-2" },
+  { id: 7, src: apartment1, images: apartmentImages, tag: "Brand & Photo", title: "Perry Shortlet", sub: "Visual Identity · Real Estate", cat: "branding", span: "md:col-span-2" },
 ] as const;
 
 const filters: { label: string; value: Cat }[] = [
@@ -68,12 +73,30 @@ export const Portfolio = () => {
               onClick={() => setLightbox(w.src)}
               className={`group relative overflow-hidden bg-card cursor-pointer ${("span" in w && w.span) || ""}`}
             >
-              <img
-                src={w.src}
-                alt={w.title}
-                loading="lazy"
-                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-50"
-              />
+              {"images" in w && w.images ? (
+                <div
+                  onClick={(e) => e.stopPropagation()}
+                  className="w-full h-full overflow-x-auto overflow-y-hidden flex snap-x snap-mandatory scrollbar-hide"
+                >
+                  {w.images.map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img}
+                      alt={`${w.title} ${idx + 1}`}
+                      loading="lazy"
+                      onClick={() => setLightbox(img)}
+                      className="w-full h-full flex-shrink-0 object-cover snap-center transition-all duration-700 hover:brightness-75"
+                    />
+                  ))}
+                </div>
+              ) : (
+                <img
+                  src={w.src}
+                  alt={w.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-50"
+                />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
                 <div className="text-eyebrow mb-2">{w.tag}</div>
                 <div className="font-display text-xl font-bold leading-tight">{w.title}</div>
