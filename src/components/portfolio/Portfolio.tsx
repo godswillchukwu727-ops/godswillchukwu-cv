@@ -20,7 +20,7 @@ const works = [
   { id: 1, src: branding, tag: "Logo Animation", title: "S&T Logo Animation", sub: "Animation", cat: "branding", span: "md:col-span-2" },
   { id: 2, src: fashion, tag: "Photography", title: "Creative Visual", sub: "Editorial", cat: "photo", span: "md:row-span-2" },
   { id: 3, src: product, tag: "Brand Identity", title: "Mockup designs", sub: "Logo and Print", cat: "photo" },
-  { id: 4, src: social, tag: "Social Media", title: "Frill Branding design", sub: "Product Design", cat: "social" },
+  { id: 4, src: social, tag: "Branding", title: "Frill Branding design", sub: "Product Design", cat: "social" },
   { id: 5, src: event, tag: "Event Coverage", title: "Holy Ghost Arena", sub: "Live Production", cat: "event", span: "md:col-span-2" },
   { id: 6, src: cinema, tag: "Cinematography", title: "The Hacker Movie trailer", sub: "Short Film", cat: "cinema" },
   { id: 7, src: apartment1, images: apartmentImages, tag: "Social Media", title: "Social media designs.", sub: "Social Media Graphics", cat: "branding", span: "md:col-span-2" },
