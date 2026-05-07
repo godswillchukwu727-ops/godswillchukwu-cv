@@ -17,7 +17,7 @@ const works = [
   { id: 3, src: product, tag: "Photography", title: "Mockup designs", sub: "Product Story", cat: "photo" },
   { id: 4, src: social, tag: "Social Media", title: "Frill Branding design", sub: "Product Design", cat: "social" },
   { id: 5, src: event, tag: "Event Coverage", title: "Holy Ghost Arena", sub: "Live Production", cat: "event", span: "md:col-span-2" },
-  { id: 6, src: cinema, tag: "Cinematography", title: "Behind the Frame", sub: "Studio Film", cat: "cinema" },
+  { id: 6, src: cinema, tag: "Cinematography", title: "The Hacker Movie trailer", sub: "Short Film", cat: "cinema" },
   { id: 7, src: apartment, tag: "Brand & Photo", title: "Perry Shortlet", sub: "Visual Identity · Real Estate", cat: "branding", span: "md:col-span-2" },
 ] as const;
 
