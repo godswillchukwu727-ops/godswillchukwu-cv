@@ -6,8 +6,13 @@ import event from "@/assets/work-event.jpg";
 import product from "@/assets/work-product.jpg";
 import fashion from "@/assets/work-fashion.jpg";
 import social from "@/assets/work-social.jpg";
-import apartment from "@/assets/work-apartment.jpg";
+import apartment1 from "@/assets/work-apartment-1.png";
+import apartment2 from "@/assets/work-apartment-2.png";
+import apartment3 from "@/assets/work-apartment-3.png";
+import apartment4 from "@/assets/work-apartment-4.png";
 import cinema from "@/assets/work-cinema.jpg";
+
+const apartmentImages = [apartment1, apartment2, apartment3, apartment4];
 
 type Cat = "all" | "branding" | "social" | "photo" | "event" | "cinema";
 
@@ -18,7 +23,7 @@ const works = [
   { id: 4, src: social, tag: "Social Media", title: "Frill Branding design", sub: "Product Design", cat: "social" },
   { id: 5, src: event, tag: "Event Coverage", title: "Holy Ghost Arena", sub: "Live Production", cat: "event", span: "md:col-span-2" },
   { id: 6, src: cinema, tag: "Cinematography", title: "The Hacker Movie trailer", sub: "Short Film", cat: "cinema" },
-  { id: 7, src: apartment, tag: "Brand & Photo", title: "Perry Shortlet", sub: "Visual Identity · Real Estate", cat: "branding", span: "md:col-span-2" },
+  { id: 7, src: apartment1, images: apartmentImages, tag: "Brand & Photo", title: "Perry Shortlet", sub: "Visual Identity · Real Estate", cat: "branding", span: "md:col-span-2" },
 ] as const;
 
 const filters: { label: string; value: Cat }[] = [
